@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#143146]
+}
+
+.gradient-bg {
+  background: linear-gradient(to bottom, black, #143146);
+}
+
+.icon-white {
+  @apply text-[#dddddd]
+}
+
+.headlines {
+  @apply text-[#dddddd] font-bold tracking-wide
+}
+
+.long-text {
+  @apply text-base text-[#e6e9ed]
+}
+
+.btn {
+  @apply py-4 px-10 opacity-90 rounded-full tracking-wider flex gap-2 items-center text-[#e6e9ed]
+}
+
+.btn-form {
+  @apply p-2 w-full opacity-90 rounded tracking-wider items-center text-[#e6e9ed] mt-5 text-center
+}
+
+.back-btn {
+  @apply text-[#e6e9ed] bg-[#de2a2a] rounded-sm px-2 py-1 opacity-90 text-sm font-semibold
+}
+
+.btn:hover, .btn-form:hover, .back-btn:hover {
+  opacity: 1;
+  box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.1); 
+}
