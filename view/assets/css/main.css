@@ -10,6 +10,10 @@ body {
   background: linear-gradient(to bottom, black, #143146);
 }
 
+.dark-bg {
+  @apply bg-[#21272A]
+}
+
 .icon-white {
   @apply text-[#dddddd]
 }
@@ -36,5 +40,9 @@ body {
 
 .btn:hover, .btn-form:hover, .back-btn:hover {
   opacity: 1;
-  box-shadow: 0px 7px 6px rgba(0, 0, 0, 0.1); 
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.shadow-custom {
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }

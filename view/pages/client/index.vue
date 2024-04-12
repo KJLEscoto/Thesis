@@ -1,11 +1,18 @@
-<script setup>
-import {
-  Icon
-} from '@iconify/vue';
+<script>
+
+import { Icon } from '@iconify/vue';
+
+export default {
+  name: 'Client',
+  components: {
+    Icon
+  }
+}
 </script>
 
-<template>
-<div class="gradient-bg h-screen w-full overflow-hidden flex">
+
+<template lang="">
+  <div class="gradient-bg h-screen w-full overflow-hidden flex">
   <!-- Sidebar Section -->
   <section class="h-screen w-1/6 bg-[#133044] text-[#dddddd] shadow p-5">
     Client
@@ -29,6 +36,7 @@ import {
           <div class="m-auto justify-center text-red-500 ">
             <Icon icon="material-symbols-light:video-camera-front-off" class="w-auto h-10 m-auto" />
             <p class="m-auto font-semibold">Camera not found.</p>
+            <router-view />
           </div>
         </div>
       </div>

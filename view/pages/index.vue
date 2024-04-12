@@ -18,7 +18,7 @@ import {
 
       <div class="flex lg:justify-start justify-center">
         <nuxt-link to="/login/as-client">
-            <button class="btn bg-[#3e5566] rounded-full">
+            <button class="btn bg-[#79838c] rounded-full">
               <Icon icon="lucide:cctv" class="w-auto h-5" />
               Start Monitoring
             </button>
