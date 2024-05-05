@@ -1,10 +1,3 @@
-<script setup>
-import {
-  Icon
-} from '@iconify/vue';
-</script>
-
-
 <template>
 <div class="gradient-bg h-full w-full">
 
@@ -16,14 +9,7 @@ import {
       <p class="long-text mb-7 cursor-default tracking-wider lg:text-start text-justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut laudantium aliquam beatae. Debitis accusamus aperiam odio repudiandae ea quaerat illo facilis fugiat nobis? Possimus temporibus, sed unde placeat consectetur quae?
         A, ut consequatur. Debitis iste repudiandae explicabo sit nemo natus molestiae optio neque aperiam, itaque cum illo vel quae incidunt quis deleniti ad earum provident quibusdam. Nobis odit consequuntur sint.</p>
 
-      <div class="flex lg:justify-start justify-center">
-        <nuxt-link to="/login/as-client">
-            <button class="btn bg-[#79838c] rounded-full">
-              <Icon icon="lucide:cctv" class="w-auto h-5" />
-              Start Monitoring
-            </button>
-        </nuxt-link>
-      </div>
+      <LandingPageButton />
     </section>
 
     <section class="m-auto">

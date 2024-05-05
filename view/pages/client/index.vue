@@ -1,18 +1,11 @@
 <script>
-
-import { Icon } from '@iconify/vue';
-
-export default {
-  name: 'Client',
-  components: {
-    Icon
-  }
-}
+import {
+  Icon
+} from '@iconify/vue';
 </script>
 
-
 <template lang="">
-  <div class="gradient-bg h-screen w-full overflow-hidden flex">
+<div class="gradient-bg h-screen w-full overflow-hidden flex">
   <!-- Sidebar Section -->
   <section class="h-screen w-1/6 bg-[#133044] text-[#dddddd] shadow p-5">
     Client
