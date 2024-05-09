@@ -74,7 +74,7 @@ async function handleLogin() {
 
   if (response.data) {
       localStorage.setItem('_token', response.data.token);
-      navigateTo('/client');
+      navigateTo('/client/monitor');
   }
   } catch (error) {
   state.errors = error.response;
@@ -86,7 +86,7 @@ async function handleLogin() {
 <template>
   <div class="gradient-bg h-auto w-full">
     <div class="flex justify-center h-screen p-5">
-      <Form @submit="handleLogin()" class="h-auto m-auto lg:w-1/3 md:w-2/4 w-3/4 dark-bg duration-200 rounded shadow-custom p-10 long-text tracking-wide" >
+      <Form @submit="handleLogin()" class="h-auto m-auto lg:w-1/3 md:w-2/4 w-3/4 dark-bg duration-200 rounded shadow-custom p-10 long-text tracking-wide">
         <div class="flex items-center gap-1 mb-5 justify-center">
           <Icon name="material-symbols:shield-person" class="w-auto h-10" />
           <h1 class="cursor-default headlines text-2xl">Authentication</h1>
@@ -101,6 +101,7 @@ async function handleLogin() {
           <Field type="text" name="username" placeholder="Enter your username" class="w-full bg-[#cbd2d7] focus:bg-[#e5e8eb] py-2 px-3 rounded border border-black transition-all duration-300 outline-none focus:border-white text-black mt-1"
             :rules="validateUserName"
             v-model="state.user.userName"
+            tabindex="1" 
           />
           <ErrorMessage class="text-red-500 text-xs italic font-bold" name="username"/>
         </section>
@@ -123,6 +124,7 @@ async function handleLogin() {
             class="w-full bg-[#cbd2d7] focus:bg-[#e5e8eb] py-2 px-3 pr-12 rounded border border-black transition-all duration-300 outline-none focus:border-white text-black mt-1"
             :rules="validatePassword"
             v-model="state.user.password"
+            tabindex="2" 
             />
             <span @mouseenter="showPassword()" @mouseleave="showPassword()" class="absolute top-2 right-0 cursor-pointer mr-3 text-black hover:text-slate-400 p-1 rounded-full duration-150 m-auto">
               <Icon class="w-auto h-5" name="ic:outline-remove-red-eye" />
@@ -131,7 +133,8 @@ async function handleLogin() {
           <ErrorMessage class="text-red-500 text-xs italic font-bold" name="password"/>
         </section>
   
-        <LoginClientButton />
+        <LoginClientButton 
+            tabindex="3" />
   
         <section class="mt-7">
           <div class="flex gap-2 items-center">
@@ -141,7 +144,8 @@ async function handleLogin() {
           </div>
         </section>
   
-        <LoginAdminContinueAs />
+        <LoginAdminContinueAs 
+            tabindex="4" />
         <!-- <input type="date" class="text-black bg-blue-500 rounded"> -->
       </Form>
     </div>

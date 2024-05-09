@@ -86,11 +86,9 @@ async function handleLogin() {
       <Form @submit="handleLogin()" class="h-auto lg:w-1/3 md:w-2/4 w-3/4 dark-bg duration-200 rounded shadow-custom p-10 long-text tracking-wide">
 
         <section class="flex justify-between items-center mb-5">
-          <div class="">
             <nuxt-link to="/login/as-client">
-              <BackButton />
+              <BackButton tabindex="5"/>
             </nuxt-link>
-          </div>
           <div class="flex items-center gap-1 justify-center">
             <Icon name="material-symbols-light:admin-panel-settings-outline-rounded" class="w-auto h-10" />
             <h1 class="cursor-default headlines text-2xl">Admin</h1>
@@ -107,6 +105,7 @@ async function handleLogin() {
           <Field type="text" name="username" placeholder="Enter your username" class="w-full bg-[#cbd2d7] focus:bg-[#e5e8eb] py-2 px-3 rounded border border-black transition-all duration-300 outline-none focus:border-white text-black mt-1"
             :rules="validateUserName"
             v-model="state.user.userName"
+            tabindex="1"
           />
           <ErrorMessage class="text-red-500 text-xs italic font-bold" name="username"/>
         </section>
@@ -119,7 +118,7 @@ async function handleLogin() {
             </div>
             <div class="flex gap-1 items-center w-auto">
               <nuxt-link to="#">
-                <LoginForgotPassword />
+                <LoginForgotPassword tabindex="4"/>
               </nuxt-link>
             </div>
           </div>
@@ -127,6 +126,7 @@ async function handleLogin() {
           <span class="flex items-center relative">
             <Field :type="passwordFieldType" @focus="isInputFocused = true" @blur="isInputFocused = false" ref="passwordField" name="password" placeholder="Enter your password"
             class="w-full bg-[#cbd2d7] focus:bg-[#e5e8eb] py-2 px-3 pr-12 rounded border border-black transition-all duration-300 outline-none focus:border-white text-black mt-1" :rules="validatePassword" v-model="state.user.password"
+            tabindex="2"
             />
             <span @mouseenter="showPassword()" @mouseleave="showPassword()" class="absolute top-2 right-0 cursor-pointer mr-3 text-black hover:text-slate-400 p-1 rounded-full duration-150 m-auto">
               <Icon class="w-auto h-5" name="ic:outline-remove-red-eye" />
@@ -135,7 +135,7 @@ async function handleLogin() {
           <ErrorMessage class="text-red-500 text-xs italic font-bold" name="password"/>
         </section>
 
-        <LoginAdminButton />
+        <LoginAdminButton tabindex="3"/>
 
       </Form>
     </div>

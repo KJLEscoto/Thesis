@@ -14,7 +14,6 @@ defineProps(['error']);
         <img src="/assets/img/cctv-cartoon-crop.gif" alt="error" class="w-auto h-40 m-auto bg-[#cbd2d7] rounded-full mb-3 border-4">  
         <p class="text-5xl mb-1 headlines">{{ error.statusCode }}</p>
         <p class="text-2xl mb-1 headlines">Oops, Access denied :( </p>
-        <!-- <p class="long-text">It appears you're not authorized to view this page. Please verify your credentials to proceed.</p> -->
         <p class="long-text">{{ error.message }}</p>
         <div class="flex justify-center">
           <nuxt-link to="/login/as-client"><button class="btn m-auto mt-5 bg-[#79838c] rounded-full flex items-center">
