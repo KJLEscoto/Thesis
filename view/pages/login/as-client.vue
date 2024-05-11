@@ -87,16 +87,14 @@ async function handleLogin() {
   <div class="gradient-bg h-auto w-full">
     <div class="flex justify-center h-screen p-5">
       <Form @submit="handleLogin()" class="h-auto m-auto lg:w-1/3 md:w-2/4 w-3/4 dark-bg duration-200 rounded shadow-custom p-10 long-text tracking-wide">
-        <div class="flex items-center gap-1 mb-5 justify-center">
-          <Icon name="material-symbols:shield-person" class="w-auto h-10" />
-          <h1 class="cursor-default headlines text-2xl">Authentication</h1>
+        <div class="flex justify-center items-center mb-5">
+          <Label label="Authentication" iconName="material-symbols:shield-person" class="text-2xl font-semibold" :iconHeight='10'/>
         </div>
   
         <hr class="mb-5">
         <section class="mb-5">
-          <div class="flex gap-1 items-center">
-            <Icon name="material-symbols:person" class="w-auto h-5" />
-            <label for="username" class="text-base">Username</label>
+          <div class="flex items-center justify-start">
+            <Label label="Username" iconName="material-symbols:person" class="text-base" :iconHeight='5'/>
           </div>
           <Field type="text" name="username" placeholder="Enter your username" class="w-full bg-[#cbd2d7] focus:bg-[#e5e8eb] py-2 px-3 rounded border border-black transition-all duration-300 outline-none focus:border-white text-black mt-1"
             :rules="validateUserName"
@@ -108,9 +106,8 @@ async function handleLogin() {
   
         <section>
           <div class="flex justify-between">
-            <div class="flex items-center gap-1">
-              <Icon name="solar:lock-password-unlocked-bold" class="w-auto h-5" />
-              <label class="text-base">Password</label>
+            <div class="flex items-center justify-start">
+              <Label label="Password" iconName="solar:lock-password-unlocked-bold" class="text-base" :iconHeight='5'/>
             </div>
             <div class="flex gap-1 items-center w-auto">
               <nuxt-link to="#">
@@ -133,8 +130,7 @@ async function handleLogin() {
           <ErrorMessage class="text-red-500 text-xs italic font-bold" name="password"/>
         </section>
   
-        <LoginClientButton 
-            tabindex="3" />
+        <Button tabindex="3" label="Login" class="bg-[#79838c] mt-5 w-full rounded" />
   
         <section class="mt-7">
           <div class="flex gap-2 items-center">
@@ -143,9 +139,9 @@ async function handleLogin() {
             <hr class="w-full">
           </div>
         </section>
-  
-        <LoginAdminContinueAs 
-            tabindex="4" />
+        
+        <Button class="bg-[#32414e] w-full mt-5 rounded" label="Continue as Admin" iconName="material-symbols-light:admin-panel-settings-outline-rounded" :disableLoading="true" route="/login/as-admin"
+          tabindex="4" />
         <!-- <input type="date" class="text-black bg-blue-500 rounded"> -->
       </Form>
     </div>

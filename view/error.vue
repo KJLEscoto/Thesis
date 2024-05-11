@@ -1,5 +1,5 @@
 <script setup>
-defineProps(['error']);
+defineProps(['error', 'router']);
 
 const router = useRouter();
 
@@ -18,10 +18,7 @@ const goBack = () => {
         <p class="text-2xl mb-1 headlines">Oops, Access denied :( </p>
         <p class="long-text">{{ error.message }}</p>
         <div class="flex justify-center">
-          <button class="btn m-auto mt-5 bg-[#79838c] rounded-full flex items-center" @click="goBack">
-            <Icon name="material-symbols:arrow-back-rounded" class="w-auto m-auto h-5 -ml-1" />
-            Back
-          </button>
+          <Button label="Go back" iconName="material-symbols:arrow-back-rounded" class="rounded-full bg-[#79838c] py-4 px-8 mt-5 btn" @click="goBack"/>
         </div>
       </div>
     </div>
