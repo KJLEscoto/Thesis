@@ -1,9 +1,11 @@
 <script setup>
-import {
-  Icon
-} from '@iconify/vue';
-
 defineProps(['error']);
+
+const router = useRouter();
+
+const goBack = () => {
+  router.go(-1); 
+};
 </script>
 
 <template>
@@ -16,10 +18,10 @@ defineProps(['error']);
         <p class="text-2xl mb-1 headlines">Oops, Access denied :( </p>
         <p class="long-text">{{ error.message }}</p>
         <div class="flex justify-center">
-          <nuxt-link to="/login/as-client"><button class="btn m-auto mt-5 bg-[#79838c] rounded-full flex items-center">
-            Login
-            <Icon icon="material-symbols:login-rounded" class="w-auto m-auto h-5 -ml-1" />
-          </button></nuxt-link>
+          <button class="btn m-auto mt-5 bg-[#79838c] rounded-full flex items-center" @click="goBack">
+            <Icon name="material-symbols:arrow-back-rounded" class="w-auto m-auto h-5 -ml-1" />
+            Back
+          </button>
         </div>
       </div>
     </div>
