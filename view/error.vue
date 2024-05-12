@@ -18,7 +18,7 @@ const goBack = () => {
         <p class="text-2xl mb-1 headlines">Oops, Access denied :( </p>
         <p class="long-text">{{ error.message }}</p>
         <div class="flex justify-center">
-          <Button label="Go back" iconName="material-symbols:arrow-back-rounded" class="rounded-full bg-[#79838c] py-4 px-8 mt-5 btn" @click="goBack"/>
+          <Button label="Go back" iconName="material-symbols:arrow-back-rounded" class="rounded-full bg-[#79838c] py-4 px-8 mt-5 btn" @click="goBack" :disableLoading="true"/>
         </div>
       </div>
     </div>

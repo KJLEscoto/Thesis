@@ -11,7 +11,7 @@ body {
 }
 
 .dark-bg {
-  @apply bg-[#21272A]
+  @apply bg-[#1e2731]
 }
 
 .icon-white {
@@ -45,6 +45,7 @@ body {
 
 *::-webkit-scrollbar {
   width: 8px;
+  height: 8px;
 }
 
 *::-webkit-scrollbar-thumb {

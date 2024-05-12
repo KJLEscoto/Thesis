@@ -1,7 +1,7 @@
 <template>
   <div class="flex items-center justify-start gap-1">
     <Icon :name="iconName" class="w-auto" :class="iconHeight"/>
-    <label>{{ label }}</label>
+    <p>{{ label }}</p>
   </div>
 </template>
 
@@ -18,7 +18,7 @@ const props = defineProps({
   },
   iconHeight: {
     type: Number,
-    default: 'auto'
+    default: '0'
   },
 });
 
